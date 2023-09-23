@@ -1,0 +1,12 @@
+[Unit]
+Description=Redis Exporter
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/redis_exporter
+User=redis_exporter
+Restart=always
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
